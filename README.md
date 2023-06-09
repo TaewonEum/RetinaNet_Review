@@ -69,3 +69,8 @@ Two-task subnet은 class subnet, box subnet으로 구성됨
 backbone Network는 Feature map을 추출하고
 
 class subnet에서 클래스 분류를 진행, box subnet에서 bounding box regression을 수행함
+
+### Backbone network
+
+- Resnet Backbone: 이미지 특성 추출
+- FPN(Feature Pyramid Network): Resnet에서 추출된 특성을 입력받아 다양한 크기의 피처 맵 
