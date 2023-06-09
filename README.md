@@ -46,6 +46,16 @@ RetinaNet은 이러한 문제를 focal Loss 방식을 도입하여 해결함
 
 ### Focal Loss
 
+Focal Loss는 쉽게 말하자면 잘 분류되는 것들-> 더 작은 loss를 주어서 분류하기 쉬운 문제에 대한 학습 비중을 줄이는 것이 focal Loss의 개념임
+
+![image](https://github.com/eumtaewon/RetinaNet_Review/assets/104436260/4459ab2a-6e40-4d5d-a7e6-4a5afd244f7a)
+
+x가 1이면 잘 분류가 된 것이고, 0이면 잘 분류가 안된 것을 나타내는 위 그래프에서
+
+x가 잘 분류될수록 Loss가 점점 더 작아집니다.
+
+즉 쉽게 판단할 수 있는 sample에 대해서는 loss를 조금주어 영향력을 낮춥니다. 반면에 어려운 문제에는 Loss값을 크게주어 학습이 집중될 수 있도록 함
+
 ### RetinaNet Architecture
 
 RetinaNet은 두 부분으로 구성됨. Backbone network와 Two-task subnet
