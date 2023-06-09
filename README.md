@@ -107,6 +107,9 @@ ResNet에서 추출된 피처 맵은 FPN layer를 통과하게됨, FPN은 피처
 
 Backbone Network에서 최종 FPN을 통과한 피처 맵과 anchor box정보를 입력 받아 두개의 subnet network
 
-Classification subnet과 box regression subnet으로 전달됨
+Classification subnet과 Box regression subnet으로 전달됨
 
+Classification subnet: 피처맵의 앵커 박스에 대해 물체가 있을 확률을 계산합니다. 또한 앵커 박스가 탐지한 객체에 대한 클래스에 대한 분류도 진행합니다.
+
+Box regression subnet은 각 앵커 박스에 대한 Bounding Box의 위치를 조정함. 앵커 박스의 위치를 보정하여 최종 Bounding Box의 
 
