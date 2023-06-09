@@ -89,6 +89,10 @@ FPN은 다양한 크기의 이미지에서 특징을 추출하는 역할을 함
 
 이를 통해 객체가 이미지의 어디에 위치하고 그 크기에 상관없이 객체를 탐지하는 데 도움을 줌
 
+추가적으로 FPN에서 각 단계마다 다양한 크기와 비율의 앵커 박스를 정의합니다. 각 FPN 단계마다 여러개의 앵커 박스를 생성하고 이를 통해
+
+다양한 크기와 비율의 물체를 탐지합니다.
+
 - 정리
 
 ResNet은 이미지를 입력 받아 이를 통해 특징을 추출함, 초기 Resnet 층에서는 간단한 특징에 대해 학습하고 이후에는 더 복잡한 특성들을 학습함
@@ -101,7 +105,7 @@ ResNet에서 추출된 피처 맵은 FPN layer를 통과하게됨, FPN은 피처
 
 ### Two task subnet
 
-Backbone Network에서 최종 FPN을 통과한 피처 맵들은 다음으로 두개의 subnet network
+Backbone Network에서 최종 FPN을 통과한 피처 맵과 anchor box정보를 입력 받아 두개의 subnet network
 
 Classification subnet과 box regression subnet으로 전달됨
 
