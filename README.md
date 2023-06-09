@@ -34,7 +34,7 @@ Prediction을 진행함
 
 RetinaNet은 이러한 foreground ,background class imbalance 는 2가지의 문제를 야기한다고 정의함
  
-1. training is inefficient as most locations are easy negatives that contribute no useful learning signal
+1.training is inefficient as most locations are easy negatives that contribute no useful learning signal
 
 2.the easy negatives can overwhelm training and lead to degenerate models.
 
