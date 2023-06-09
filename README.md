@@ -73,4 +73,6 @@ class subnet에서 클래스 분류를 진행, box subnet에서 bounding box reg
 ### Backbone network
 
 - Resnet Backbone: 이미지 특성 추출
-- FPN(Feature Pyramid Network): Resnet에서 추출된 특성을 입력받아 다양한 크기의 피처 맵 
+- FPN(Feature Pyramid Network): Resnet에서 추출된 특성을 입력받아 다양한 크기의 피처 맵 생성
+
+
