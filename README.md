@@ -39,7 +39,8 @@ RetinaNet은 이러한 foreground ,background class imbalance 는 2가지의 문
 2.the easy negatives can overwhelm training and lead to degenerate models.
 
 
-배경을 담고있는 (background) anchor의 수가 훨씬 더 많을
+
+
 
 ### RetinaNet Architecture
 
