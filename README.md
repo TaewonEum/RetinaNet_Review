@@ -58,16 +58,14 @@ x가 잘 분류될수록 Loss가 점점 더 작아집니다.
 
 ### RetinaNet Model Architecture
 
+![image](https://github.com/eumtaewon/RetinaNet_Review/assets/104436260/9d4cdbd5-b1ac-4402-8dfd-ac73f57a22fe)
+
 RetinaNet은 두 부분으로 구성됨. Backbone network와 Two-task subnet
 
 Backbone network 일반적으로 ResNet과 FPN의 조합으로 구성됨
 
 Two-task subnet은 class subnet, box subnet으로 구성됨
 
-### Backbone network
+backbone Network는 Feature map을 추출하고
 
-ResNet->이미지에서 특성 추출
-
-FPN-> 다양한 크기와 비율의 객체를 탐지하는 데 도움이 되는 다양한 해상도의 특성맵 생성
-
-### Two-task subnet
+class subnet에서 클래스 분류를 진행, box subnet에서 bounding box regression을 수행함
