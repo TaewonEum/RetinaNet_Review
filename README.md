@@ -38,9 +38,13 @@ RetinaNet은 이러한 foreground ,background class imbalance 는 2가지의 문
 
 2.the easy negatives can overwhelm training and lead to degenerate models.
 
+즉, easy negative 배경이 사진에서 비율이 높기 때문에 객체를 찾는 것이 비효율적이고 
 
+easy negative에 모델이 압도되어서 성능이 떨어짐
 
+RetinaNet은 이러한 문제를 focal Loss 방식을 도입하여 해결함
 
+### Focal Loss
 
 ### RetinaNet Architecture
 
