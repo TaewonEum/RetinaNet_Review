@@ -56,11 +56,13 @@ x가 잘 분류될수록 Loss가 점점 더 작아집니다.
 
 즉 쉽게 판단할 수 있는 sample에 대해서는 loss를 조금주어 영향력을 낮춥니다. 반면에 어려운 문제에는 Loss값을 크게주어 학습이 집중될 수 있도록 함
 
-### RetinaNet Architecture
+### RetinaNet Model Architecture
 
 RetinaNet은 두 부분으로 구성됨. Backbone network와 Two-task subnet
 
 Backbone network 일반적으로 ResNet과 FPN의 조합으로 구성됨
+
+Two-task subnet은 class subnet, box subnet으로 구성됨
 
 ### Backbone network
 
