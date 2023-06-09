@@ -75,4 +75,34 @@ class subnet에서 클래스 분류를 진행, box subnet에서 bounding box reg
 - Resnet Backbone: 이미지 특성 추출
 - FPN(Feature Pyramid Network): Resnet에서 추출된 특성을 입력받아 다양한 크기의 피처 맵 생성
 
+ResNet은 CNN 기반의 모델로 이미지의 특징을 추출하는 모델로 생각하면 됨
+
+ResNet은 모델의 층이 깊어져도 학습이 잘 되도록 구현한 모델이라고 생각하면됨
+
+FPN은 다른 크기들의 객체를 탐지하는 시스템의 기본 요소임
+
+FPN은 Resnet에서 추출된 이미지를 입력으로 받아 fully convolutional 방법으로 다양한 크기의
+
+Feature map들을 출력한다. ResNet과는 독립적으로 수행됨
+
+FPN은 다양한 크기의 이미지에서 특징을 추출하는 역할을 함
+
+이를 통해 객체가 이미지의 어디에 위치하고 그 크기에 상관없이 객체를 탐지하는 데 도움을 줌
+
+- 정리
+
+ResNet은 이미지를 입력 받아 이를 통해 특징을 추출함, 초기 Resnet 층에서는 간단한 특징에 대해 학습하고 이후에는 더 복잡한 특성들을 학습함
+
+이렇게 학습된 특성은 피처맵으로 출력되고 각 FPN layer에 전달 추출
+
+ResNet에서 추출된 피처 맵은 FPN layer를 통과하게됨, FPN은 피처 맵을 입력으로 받고 다양한 크기의 피처맵을 생성함
+
+때문에 큰 객체, 작은 객체를 효과적으로 탐지할 수 있게됨
+
+### Two task subnet
+
+Backbone Network에서 최종 FPN을 통과한 피처 맵들은 다음으로 두개의 subnet network
+
+Classification subnet과 box regression subnet으로 전달됨
+
 
