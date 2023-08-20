@@ -12,7 +12,7 @@ Detection은 localization과 classification의 문제임
 
 Detection 모델은 One-Stage-Detector와 Two-Stage-Detector로 나뉨
 
-One Stage Detector는 물체의 위치와 클래스를 한 번에 예측하는 모델이고(임
+One Stage Detector는 물체의 위치와 클래스를 한 번에 예측하는 모델이며
 
 Two Stage는 두 단계를 나누어 수행하는 모델임
 
@@ -111,5 +111,11 @@ Classification subnet과 Box regression subnet으로 전달됨
 
 Classification subnet: 피처맵의 앵커 박스에 대해 물체가 있을 확률을 계산합니다. 또한 앵커 박스가 탐지한 객체에 대한 클래스에 대한 분류도 진행합니다.
 
-Box regression subnet은 각 앵커 박스에 대한 Bounding Box의 위치를 조정함. 앵커 박스의 위치를 보정하여 최종 Bounding Box의 
+Box regression subnet은 각 앵커 박스에 대한 Bounding Box의 위치를 조정함. 객체의 크기, 회전, 위치 등의 다양한 변형을 처리하고 이러한 변형을 보정하여 정확한 바운딩 박스를 얻는 역할을 함
+
+### SAMPLE DATA
+
+AI HUB 넙치광어 데이터로 진행
+
+해당 데이터의 라벨링 데이터를 RetinaNet input구조에 맞추어 변형하고 파라미터를 수정하여 학습 진행함
 
